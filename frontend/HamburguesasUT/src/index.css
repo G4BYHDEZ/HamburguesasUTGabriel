@@ -1,0 +1,602 @@
+/* =========================
+   BASE RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+/* =========================
+   HERO WRAPPER
+========================= */
+.hero-bg-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    135deg,
+    #008080,   /* Teal institucional */
+    #555555    /* Gris corporativo */
+  );
+}
+
+/* =========================
+   LOGIN CONTAINER
+========================= */
+.login-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* =========================
+   LOGIN CARD
+========================= */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+  text-align: center;
+  border-top: 6px solid #008080; /* Teal */
+}
+
+/* =========================
+   LOGO
+========================= */
+.login-logo {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   TITLE
+========================= */
+.login-card h1 {
+  color: #008080; /* Teal */
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+.login-message {
+  background: #e0f7fa; /* Teal muy claro */
+  color: #006064;      /* Teal oscuro */
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-card input:focus {
+  border-color: #008080;
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.2);
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+
+  background: #555555; /* Gris */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-primary:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 22px;
+  }
+
+  .login-logo {
+    width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 10px;
+  }
+
+  .login-card {
+    width: 100%;
+  }
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar-header {
+  background: linear-gradient(135deg, #008080, #555555);
+  padding: 12px 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  height: 60px;
+  transition: transform 0.3s;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar-item {
+  transition: 0.3s;
+}
+
+.navbar-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar-link:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.active-link .navbar-link {
+  background: #ffffff;
+  color: #008080;
+  font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer-container {
+  background: linear-gradient(135deg, #008080, #555555);
+  color: #fff;
+  padding: 20px;
+  border-top: 4px solid #008080;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-icon {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.footer-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #e0f7fa;
+}
+
+.footer-map {
+  margin: 20px 0;
+}
+
+.footer-address {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #e0f7fa;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 15px;
+}
+
+.footer-logo {
+  height: 50px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #ccc;
+}
+/* =========================
+   FOOTER LINK
+========================= */
+.footer-link {
+  color: #ffffff;          /* Teal institucional */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.footer-link:hover {
+  color: #d8d8d8;          /* Teal más oscuro */
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+.footer-link:active {
+  color: #004d40;          /* Teal profundo */
+  transform: scale(0.98);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+/* =========================
+   HOME
+========================= */
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hero Wrapper */
+.hero-bg-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    135deg,
+    #008080,   /* Teal institucional */
+    #555555    /* Gris corporativo */
+  );
+}
+
+/* Home Card */
+.home-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 600px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+  text-align: center;
+  border-top: 6px solid #008080;
+}
+
+/* Logo */
+.home-logo {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.home-title {
+  color: #008080;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* Message */
+.home-message {
+  background: #e0f7fa; /* Teal muy claro */
+  color: #006064;      /* Teal oscuro */
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-card {
+    padding: 28px;
+    margin: 20px;
+  }
+
+  .home-logo {
+    width: 130px;
+  }
+
+  .home-title {
+    font-size: 22px;
+  }
+
+  .home-message {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-card {
+    width: 100%;
+    margin: 15px;
+    padding: 22px;
+  }
+
+  .home-title {
+    font-size: 20px;
+  }
+
+  .home-message {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   PRODUCTOS
+========================= */
+.productos-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hero Wrapper */
+.hero-bg-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    135deg,
+    #008080,   /* Teal institucional */
+    #555555    /* Gris corporativo */
+  );
+}
+
+/* Productos Card */
+.productos-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 600px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+  text-align: center;
+  border-top: 6px solid #008080;
+}
+
+/* Logo */
+.productos-logo {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.productos-title {
+  color: #008080;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* Message */
+.productos-message {
+  background: #e0f7fa; /* Teal muy claro */
+  color: #006064;      /* Teal oscuro */
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .productos-card {
+    padding: 28px;
+    margin: 20px;
+  }
+
+  .productos-logo {
+    width: 130px;
+  }
+
+  .productos-title {
+    font-size: 22px;
+  }
+
+  .productos-message {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productos-card {
+    width: 100%;
+    margin: 15px;
+    padding: 22px;
+  }
+
+  .productos-title {
+    font-size: 20px;
+  }
+
+  .productos-message {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   CARRITO
+========================= */
+.carrito-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hero Wrapper */
+.hero-bg-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    135deg,
+    #008080,   /* Teal institucional */
+    #555555    /* Gris corporativo */
+  );
+}
+
+/* Carrito Card */
+.carrito-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 600px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+  text-align: center;
+  border-top: 6px solid #008080;
+}
+
+/* Logo */
+.carrito-logo {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.carrito-title {
+  color: #008080;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* Message */
+.carrito-message {
+  background: #e0f7fa; /* Teal muy claro */
+  color: #006064;      /* Teal oscuro */
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carrito-card {
+    padding: 28px;
+    margin: 20px;
+  }
+
+  .carrito-logo {
+    width: 130px;
+  }
+
+  .carrito-title {
+    font-size: 22px;
+  }
+
+  .carrito-message {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carrito-card {
+    width: 100%;
+    margin: 15px;
+    padding: 22px;
+  }
+
+  .carrito-title {
+    font-size: 20px;
+  }
+
+  .carrito-message {
+    font-size: 13px;
+  }
+}

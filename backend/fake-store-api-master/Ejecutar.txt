@@ -1,0 +1,45 @@
+Editar para tu mongo:
+"C:\Program Files\MongoDB\Server\8.0\bin\mongod.exe" --dbpath C:\data\db
+
+INSTALAR EN LA CARPETA
+npm install mongoose
+npm start
+http://localhost:8765
+
+
+
+MONGOSH INSERT
+//Paso 1 prender mongo
+mongosh
+
+//Paso 2 seleccionar db
+use fake_store
+... show collections
+
+
+//Paso 3 insertar
+db.products.insertOne({ name: "test product", price: 10 })
+
+//Paso 4 borrar
+db.products.deleteOne({_id: ObjectId("6a405314a71de99a866c4bd0")})
+
+
+//Ver colecciones
+show collections
+
+//ver productos
+db.products.find().pretty()
+
+//modificar producto
+db.products.updateOne(
+  { _id: ObjectId("6a3f654894ad51bb746c4bd0") },
+  { $set: { price: 50, name: "updated product" } }
+)
+
+
+//CAMBIOS (Gabriel)
+1. Cambio URL de api user en .env(frontend)
+2. Agrege pagina de registro y de perfil (se puede quitar este ultimo si se prefiere)
+3. Movi el .env adentro de la carpeta frontend ya que no estaba cargándolo bien
+4. Agrege componente ruta protegida para redigir si se entra al carrito sin sesión iniciada
+5. Cambio en el archivo de la carpeta controller de user para que lo guarde cuando se agregue uno y que se llame correctamente

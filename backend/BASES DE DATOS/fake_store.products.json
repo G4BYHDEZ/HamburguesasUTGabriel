@@ -1,0 +1,498 @@
+[{
+  "_id": {
+    "$oid": "6a3f73caf31eb27c8d1986d0"
+  },
+  "name": "Hamburguesa Clásica",
+  "price": 85,
+  "category": "food",
+  "subcategory": "hamburgers",
+  "description": "Carne, queso, lechuga y tomate",
+  "image": "burger1.jpg",
+  "stock": 25,
+  "rating": [
+    {
+      "userId": "u1",
+      "value": 5
+    },
+    {
+      "userId": "u2",
+      "value": 4
+    },
+    {
+      "userId": "u3",
+      "value": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f73caf31eb27c8d1986d1"
+  },
+  "name": "Hamburguesa Doble Queso",
+  "price": 110,
+  "category": "food",
+  "subcategory": "hamburgers",
+  "description": "Doble carne y doble queso",
+  "image": "burger2.jpg",
+  "stock": 18,
+  "rating": [
+    {
+      "userId": "u2",
+      "value": 5
+    },
+    {
+      "userId": "u4",
+      "value": 4
+    },
+    {
+      "userId": "u5",
+      "value": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f73caf31eb27c8d1986d2"
+  },
+  "name": "Hamburguesa BBQ",
+  "price": 120,
+  "category": "food",
+  "subcategory": "hamburgers",
+  "description": "Salsa BBQ, tocino y carne",
+  "image": "burger3.jpg",
+  "stock": 15,
+  "rating": [
+    {
+      "userId": "u1",
+      "value": 4
+    },
+    {
+      "userId": "u6",
+      "value": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f73caf31eb27c8d1986d3"
+  },
+  "name": "Hamburguesa Picante",
+  "price": 95,
+  "category": "food",
+  "subcategory": "hamburgers",
+  "description": "Salsa picante y jalapeños",
+  "image": "burger4.jpg",
+  "stock": 20,
+  "rating": [
+    {
+      "userId": "u3",
+      "value": 4
+    },
+    {
+      "userId": "u5",
+      "value": 3
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f73caf31eb27c8d1986d4"
+  },
+  "name": "Hamburguesa Chicken",
+  "price": 90,
+  "category": "food",
+  "subcategory": "hamburgers",
+  "description": "Pechuga empanizada",
+  "image": "burger5.jpg",
+  "stock": 22,
+  "rating": [
+    {
+      "userId": "u2",
+      "value": 4
+    },
+    {
+      "userId": "u6",
+      "value": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f73caf31eb27c8d1986d5"
+  },
+  "name": "Hamburguesa Veggie",
+  "price": 80,
+  "category": "food",
+  "subcategory": "hamburgers",
+  "description": "Hamburguesa vegetariana",
+  "image": "burger6.jpg",
+  "stock": 10,
+  "rating": [
+    {
+      "userId": "u4",
+      "value": 4
+    },
+    {
+      "userId": "u1",
+      "value": 3
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7450f31eb27c8d1986d7"
+  },
+  "name": "Coca Cola",
+  "price": 25,
+  "category": "drinks",
+  "subcategory": "sodas",
+  "stock": 50,
+  "rating": [
+    {
+      "userId": "u1",
+      "value": 5
+    },
+    {
+      "userId": "u2",
+      "value": 5
+    },
+    {
+      "userId": "u3",
+      "value": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7450f31eb27c8d1986d8"
+  },
+  "name": "Pepsi",
+  "price": 25,
+  "category": "drinks",
+  "subcategory": "sodas",
+  "stock": 45,
+  "rating": [
+    {
+      "userId": "u4",
+      "value": 4
+    },
+    {
+      "userId": "u5",
+      "value": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7450f31eb27c8d1986d9"
+  },
+  "name": "Agua Natural",
+  "price": 15,
+  "category": "drinks",
+  "subcategory": "water",
+  "stock": 60,
+  "rating": [
+    {
+      "userId": "u6",
+      "value": 5
+    },
+    {
+      "userId": "u2",
+      "value": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7450f31eb27c8d1986da"
+  },
+  "name": "Limonada",
+  "price": 30,
+  "category": "drinks",
+  "subcategory": "natural",
+  "stock": 30,
+  "rating": [
+    {
+      "userId": "u1",
+      "value": 4
+    },
+    {
+      "userId": "u3",
+      "value": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7450f31eb27c8d1986db"
+  },
+  "name": "Té Helado",
+  "price": 28,
+  "category": "drinks",
+  "subcategory": "tea",
+  "stock": 25,
+  "rating": [
+    {
+      "userId": "u4",
+      "value": 4
+    },
+    {
+      "userId": "u5",
+      "value": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7450f31eb27c8d1986dc"
+  },
+  "name": "Malteada Vainilla",
+  "price": 45,
+  "category": "drinks",
+  "subcategory": "milkshake",
+  "stock": 20,
+  "rating": [
+    {
+      "userId": "u6",
+      "value": 5
+    },
+    {
+      "userId": "u1",
+      "value": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7459f31eb27c8d1986de"
+  },
+  "name": "Helado Vainilla",
+  "price": 35,
+  "category": "desserts",
+  "stock": 30,
+  "rating": [
+    {
+      "userId": "u1",
+      "value": 4
+    },
+    {
+      "userId": "u2",
+      "value": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7459f31eb27c8d1986df"
+  },
+  "name": "Helado Chocolate",
+  "price": 35,
+  "category": "desserts",
+  "stock": 28,
+  "rating": [
+    {
+      "userId": "u3",
+      "value": 5
+    },
+    {
+      "userId": "u4",
+      "value": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7459f31eb27c8d1986e0"
+  },
+  "name": "Pastel de Chocolate",
+  "price": 50,
+  "category": "desserts",
+  "stock": 15,
+  "rating": [
+    {
+      "userId": "u5",
+      "value": 5
+    },
+    {
+      "userId": "u6",
+      "value": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7459f31eb27c8d1986e1"
+  },
+  "name": "Brownie",
+  "price": 40,
+  "category": "desserts",
+  "stock": 18,
+  "rating": [
+    {
+      "userId": "u2",
+      "value": 4
+    },
+    {
+      "userId": "u3",
+      "value": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7459f31eb27c8d1986e2"
+  },
+  "name": "Pay de Queso",
+  "price": 55,
+  "category": "desserts",
+  "stock": 12,
+  "rating": [
+    {
+      "userId": "u1",
+      "value": 5
+    },
+    {
+      "userId": "u4",
+      "value": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7459f31eb27c8d1986e3"
+  },
+  "name": "Galletas",
+  "price": 20,
+  "category": "desserts",
+  "stock": 40,
+  "rating": [
+    {
+      "userId": "u5",
+      "value": 4
+    },
+    {
+      "userId": "u6",
+      "value": 3
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a3f7462f31eb27c8d1986e5"
+  },
+  "name": "Combo Clásico",
+  "price": 120,
+  "category": "combos",
+  "stock": 15,
+  "rating": [
+    {
+      "userId": "u1",
+      "value": 5
+    },
+    {
+      "userId": "u2",
+      "value": 4
+    }
+  ],
+  "includes": "Hamburguesa + Papas + Refresco"
+},
+{
+  "_id": {
+    "$oid": "6a3f7462f31eb27c8d1986e6"
+  },
+  "name": "Combo Doble",
+  "price": 150,
+  "category": "combos",
+  "stock": 12,
+  "rating": [
+    {
+      "userId": "u3",
+      "value": 5
+    },
+    {
+      "userId": "u4",
+      "value": 5
+    }
+  ],
+  "includes": "Hamburguesa doble + papas + bebida"
+},
+{
+  "_id": {
+    "$oid": "6a3f7462f31eb27c8d1986e7"
+  },
+  "name": "Combo BBQ",
+  "price": 160,
+  "category": "combos",
+  "stock": 10,
+  "rating": [
+    {
+      "userId": "u5",
+      "value": 4
+    },
+    {
+      "userId": "u6",
+      "value": 5
+    }
+  ],
+  "includes": "BBQ burger + papas + bebida"
+},
+{
+  "_id": {
+    "$oid": "6a3f7462f31eb27c8d1986e8"
+  },
+  "name": "Combo Familiar",
+  "price": 280,
+  "category": "combos",
+  "stock": 8,
+  "rating": [
+    {
+      "userId": "u1",
+      "value": 5
+    },
+    {
+      "userId": "u3",
+      "value": 5
+    }
+  ],
+  "includes": "4 hamburguesas + papas grandes + 4 bebidas"
+},
+{
+  "_id": {
+    "$oid": "6a3f7462f31eb27c8d1986e9"
+  },
+  "name": "Combo Picante",
+  "price": 140,
+  "category": "combos",
+  "stock": 14,
+  "rating": [
+    {
+      "userId": "u2",
+      "value": 4
+    },
+    {
+      "userId": "u5",
+      "value": 3
+    }
+  ],
+  "includes": "Hamburguesa picante + papas + bebida"
+},
+{
+  "_id": {
+    "$oid": "6a3f7462f31eb27c8d1986ea"
+  },
+  "name": "Combo Light",
+  "price": 110,
+  "category": "combos",
+  "stock": 20,
+  "rating": [
+    {
+      "userId": "u4",
+      "value": 4
+    },
+    {
+      "userId": "u6",
+      "value": 5
+    }
+  ],
+  "includes": "Hamburguesa veggie + agua + ensalada"
+}]
