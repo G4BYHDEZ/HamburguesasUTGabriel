@@ -182,27 +182,3 @@
     border-right-color: var(--border);
   }
 }
-
-.login-switch{
-    margin-top:20px;
-    text-align:center;
-    font-size:14px;
-}
-
-.login-link{
-    color:#00897b;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.login-link:hover{
-    color:#00695c;
-    text-decoration:underline;
-}
-
-.login-message{
-    text-align:center;
-    color:#d32f2f;
-    margin-bottom:15px;
-}

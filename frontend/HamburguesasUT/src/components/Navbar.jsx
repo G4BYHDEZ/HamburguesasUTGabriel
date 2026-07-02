@@ -1,16 +1,25 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { totalItems } = useCart();
 
-  const usuario = JSON.parse(localStorage.getItem("usuario"));
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  const cerrarSesion = () => {
+    localStorage.removeItem("user");
+    navigate("/");
+    window.location.reload();
+  };
 
   const links = [
     { nombre: "Inicio", ruta: "/" },
     { nombre: "Menú", ruta: "/menu" },
-    { nombre: "Carrito", ruta: "/carrito" },
-    usuario
+    { nombre: "Carrito", ruta: "/carrito", badge: totalItems },
+    user
       ? { nombre: "Mi Perfil", ruta: "/perfil" }
       : { nombre: "Login", ruta: "/login" }
   ];
@@ -18,7 +27,6 @@ function Navbar() {
   return (
     <header className="navbar-header">
       <div className="navbar-content">
-
         <Link to="/">
           <img
             src="src/HamburguesasUT.png"
@@ -38,17 +46,28 @@ function Navbar() {
                     : "navbar-item"
                 }
               >
-                <Link
-                  to={link.ruta}
-                  className="navbar-link"
-                >
+                <Link to={link.ruta} className="navbar-link">
                   {link.nombre}
+                  {link.badge !== undefined && link.badge > 0 && (
+                    <span className="navbar-badge">{link.badge}</span>
+                  )}
                 </Link>
               </li>
             ))}
+
+            {user && (
+              <li className="navbar-item">
+                <button
+                  type="button"
+                  className="navbar-link navbar-logout-btn"
+                  onClick={cerrarSesion}
+                >
+                  Cerrar sesión
+                </button>
+              </li>
+            )}
           </ul>
         </nav>
-
       </div>
     </header>
   );

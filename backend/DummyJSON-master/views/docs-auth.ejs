@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- header -->
+<%- include('./partials/docs-head') %>
+
+<body>
+  <!-- header -->
+  <%- include('./partials/header') %>
+
+  <!-- side-nav -->
+  <%- include('./partials/docs-side-nav') %>
+
+  <section>
+    <div class="content">
+      <h1 class="docs-title">
+        <img src="/public/img/icons/lock.svg" class="icon" alt="svg icon" /> Auth - Docs
+      </h1>
+      <p class="display-para">
+        The <strong>auth</strong> endpoint provides details about the user authentication and authorization and refresh tokens.
+      </p>
+
+      <div class="resource" id="auth-login">
+        <a href="#auth-login" class="res-title">Login user and get tokens</a>
+        <p class="res-tip">
+          You can use any user's credentials from <a href="/users">dummyjson.com/users</a>. Tokens are returned in the response and set as cookies.
+        </p>
+        <pre><code class="language-js">
+          fetch('https://dummyjson.com/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              <!-- any username/password from users module  -->
+              username: 'emilys',
+              password: 'emilyspass',
+              expiresInMins: 30, // optional, defaults to 60
+            }),
+            credentials: 'include' // Include cookies (e.g., accessToken) in the request
+          })
+          .then(res => res.json())
+          .then(console.log);
+        </code></pre>
+
+        <button class="show-output btn">Show Output</button>
+
+        <pre class="output"><code class="language-json">
+          {
+            "id": 1,
+            "username": "emilys",
+            "email": "emily.johnson@x.dummyjson.com",
+            "firstName": "Emily",
+            "lastName": "Johnson",
+            "gender": "female",
+            "image": "https://dummyjson.com/icon/emilys/128",
+            "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...", // JWT accessToken (for backward compatibility) in response and cookies
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." // refreshToken in response and cookies
+          }
+        </code></pre>
+      </div>
+
+      <div class="resource" id="auth-me">
+        <a href="#auth-me" class="res-title">Get current auth user</a>
+        <pre><code class="language-js">
+          /* providing accessToken in bearer */
+          fetch('https://dummyjson.com/auth/me', {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer /* YOUR_ACCESS_TOKEN_HERE */', // Pass JWT via Authorization header
+            }, 
+            credentials: 'include' // Include cookies (e.g., accessToken) in the request
+          })
+          .then(res => res.json())
+          .then(console.log);
+        </code></pre>
+
+        <button class="show-output btn">Show Output</button>
+
+        <pre class="output"><code class="language-json">
+          {
+            "id": 1,
+            "username": "emilys",
+            "email": "emily.johnson@x.dummyjson.com",
+            "firstName": "Emily",
+            "lastName": "Johnson",
+            "gender": "female",
+            "image": "https://dummyjson.com/icon/emilys/128"
+            ... // other user fields
+          }
+        </code></pre>
+      </div>
+
+      <div class="resource" id="auth-refresh">
+        <a href="#auth-refresh" class="res-title">Refresh auth session</a>
+        <p class="res-tip">Extend the session and create a new access token without username and password. Tokens can also be passed using cookies.</p>
+        <pre><code class="language-js">
+          fetch('https://dummyjson.com/auth/refresh', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              refreshToken: '/* YOUR_REFRESH_TOKEN_HERE */', // Optional, if not provided, the server will use the cookie
+              expiresInMins: 30, // optional (FOR ACCESS TOKEN), defaults to 60 
+            }),
+            credentials: 'include' // Include cookies (e.g., accessToken) in the request
+          })
+          .then(res => res.json())
+          .then(console.log);
+        </code></pre>
+
+        <button class="show-output btn">Show Output</button>
+
+        <pre class="output"><code class="language-json">
+          {
+            "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...", // new accessToken (returned in both response and cookies)
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." // new refreshToken (returned in both response and cookies)
+          }
+        </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <%- include('./partials/docs-footer') %>
+
+  <script>
+    selectNavItem(window.location.hash || '#auth-login');
+  </script>
+</body>
+
+</html>

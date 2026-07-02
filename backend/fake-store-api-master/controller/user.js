@@ -48,14 +48,14 @@ module.exports.addUser = (req, res) => {
 					username: req.body.username,
 					password: req.body.password,
 					name: {
-						firstname: req.body.name.firstname,
-						lastname: req.body.name.lastname,
+						firstname: req.body.firstname,
+						lastname: req.body.lastname,
 					},
 					address: {
 						city: req.body.address.city,
 						street: req.body.address.street,
-						number: Number(req.body.address.number),
-						zipcode: req.body.address.zipcode,
+						number: req.body.number,
+						zipcode: req.body.zipcode,
 						geolocation: {
 							lat: req.body.address.geolocation.lat,
 							long: req.body.address.geolocation.long,
@@ -63,14 +63,11 @@ module.exports.addUser = (req, res) => {
 					},
 					phone: req.body.phone,
 				});
-				   user.save()
-					.then((user) => res.json(user))
-					.catch((err) => {
-						console.log(err);
-						res.status(500).json({
-							mensaje: "Error al guardar el usuario"
-						});
-					});
+				// user.save()
+				//   .then(user => res.json(user))
+				//   .catch(err => console.log(err))
+
+				res.json(user);
 			});
 
 		//res.json({id:User.find().count()+1,...req.body})
@@ -90,14 +87,14 @@ module.exports.editUser = (req, res) => {
 			username: req.body.username,
 			password: req.body.password,
 			name: {
-				firstname: req.body.name.firstname,
-				lastname: req.body.name.lastname,
+				firstname: req.body.firstname,
+				lastname: req.body.lastname,
 			},
 			address: {
 				city: req.body.address.city,
 				street: req.body.address.street,
-				number: Number(req.body.address.number),
-				zipcode: req.body.address.zipcode,
+				number: req.body.number,
+				zipcode: req.body.zipcode,
 				geolocation: {
 					lat: req.body.address.geolocation.lat,
 					long: req.body.address.geolocation.long,

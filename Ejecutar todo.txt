@@ -1,0 +1,19 @@
+MONGO
+Editar para tu mongo:
+cd "C:\Program Files\MongoDB\Server\8.0\bin"
+& "C:\Program Files\MongoDB\Server\8.0\bin\mongod.exe" --dbpath C:\data\db
+
+\backend\checkout-api-master (para checkout)
+node server.js
+
+\backend\DummyJSON-master (para login)
+node -r dotenv/config index.js
+
+\backend\fake-store-api-master (para productos)
+npm start
+
+\backend\hamburguesasut-backend (principal)
+node -r dotenv/config server.js
+
+\frontend\HamburguesasUT
+npm run dev

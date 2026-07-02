@@ -1,11 +1,12 @@
 import Navbar from "../components/Navbar";
 import FooterBar from "../components/FooterBar";
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import apiUsers from "../api/apiUsers";
+import { useNavigate } from "react-router-dom";
+import api from "../api/api";
 
 function Login() {
   const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [mensaje, setMensaje] = useState("");
@@ -13,27 +14,29 @@ function Login() {
 
   const enviarCredenciales = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    setMensaje("");
-    try {
-      const response = await apiUsers.get("/users");
-      console.log(response.data);
-      const usuario = response.data.find(
-        (u) =>
-          u.email === email &&
-          u.password === password
-      );
-      if (!usuario) {
-        setMensaje("Correo o contraseña incorrectos.");
-        return;
-      }
-      // Guardar sesión
-      localStorage.setItem("usuario", JSON.stringify(usuario));
 
+    try {
+      setLoading(true);
+      setMensaje("");
+
+      const response = await api.post("/users/login", {
+        email,
+        password
+      });
+
+      // Guardar usuario (o token si tu API lo regresa después)
+      localStorage.setItem("user",JSON.stringify(response.data));
+
+      setMensaje("Login correcto");
+
+      // Redirigir a home o dashboard
       navigate("/");
+
     } catch (error) {
-      console.error(error);
-      setMensaje("No fue posible conectar con el servidor.");
+      setMensaje(
+        error.response?.data?.mensaje ||
+        "Error al iniciar sesión"
+      );
     } finally {
       setLoading(false);
     }
@@ -42,47 +45,49 @@ function Login() {
   return (
     <div className="hero-bg-wrapper">
       <Navbar />
+
       <div className="login-container">
+
         <div className="login-card">
           <h1>Iniciar sesión</h1>
+
           {mensaje && (
-            <p className="login-message">{mensaje}</p>
+            <p className="login-message">
+              {mensaje}
+            </p>
           )}
+
           <form onSubmit={enviarCredenciales}>
             <input
               type="email"
               placeholder="Correo electrónico"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) =>
+                setEmail(e.target.value)
+              }
               required
             />
+
             <input
               type="password"
               placeholder="Contraseña"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) =>
+                setPassword(e.target.value)
+              }
               required
             />
-            <button
-              type="submit"
-              className="btn-primary"
-              disabled={loading}
-            >
+
+            <button type="submit" className="btn-primary">
               {loading ? "Ingresando..." : "Ingresar"}
             </button>
           </form>
-          <div className="login-switch">
-            <p>
-              ¿No tienes una cuenta?{" "}
-              <Link to="/register" className="login-link">
-                Crea una
-              </Link>
-            </p>
-          </div>
         </div>
       </div>
+
       <FooterBar />
     </div>
   );
 }
+
 export default Login;

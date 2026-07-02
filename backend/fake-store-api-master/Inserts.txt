@@ -89,6 +89,7 @@ BEBIDAS
     "price": 25,
     "category": "drinks",
     "subcategory": "sodas",
+    "image": "https://source.unsplash.com/600x400/?coca-cola",
     "stock": 50,
     "rating": [
       { "userId": "u1", "value": 5 },
@@ -101,6 +102,7 @@ BEBIDAS
     "price": 25,
     "category": "drinks",
     "subcategory": "sodas",
+    "image": "https://source.unsplash.com/600x400/?pepsi",
     "stock": 45,
     "rating": [
       { "userId": "u4", "value": 4 },
@@ -112,6 +114,7 @@ BEBIDAS
     "price": 15,
     "category": "drinks",
     "subcategory": "water",
+    "image": "https://source.unsplash.com/600x400/?water-bottle",
     "stock": 60,
     "rating": [
       { "userId": "u6", "value": 5 },
@@ -123,6 +126,7 @@ BEBIDAS
     "price": 30,
     "category": "drinks",
     "subcategory": "natural",
+    "image": "https://source.unsplash.com/600x400/?lemonade",
     "stock": 30,
     "rating": [
       { "userId": "u1", "value": 4 },
@@ -134,6 +138,7 @@ BEBIDAS
     "price": 28,
     "category": "drinks",
     "subcategory": "tea",
+    "image": "https://source.unsplash.com/600x400/?iced-tea",
     "stock": 25,
     "rating": [
       { "userId": "u4", "value": 4 },
@@ -145,6 +150,7 @@ BEBIDAS
     "price": 45,
     "category": "drinks",
     "subcategory": "milkshake",
+    "image": "https://source.unsplash.com/600x400/?vanilla-milkshake",
     "stock": 20,
     "rating": [
       { "userId": "u6", "value": 5 },
@@ -159,6 +165,7 @@ POSTRES
     "name": "Helado Vainilla",
     "price": 35,
     "category": "desserts",
+    "image": "https://source.unsplash.com/600x400/?vanilla-ice-cream",
     "stock": 30,
     "rating": [
       { "userId": "u1", "value": 4 },
@@ -169,6 +176,7 @@ POSTRES
     "name": "Helado Chocolate",
     "price": 35,
     "category": "desserts",
+    "image": "https://source.unsplash.com/600x400/?chocolate-ice-cream",
     "stock": 28,
     "rating": [
       { "userId": "u3", "value": 5 },
@@ -179,6 +187,7 @@ POSTRES
     "name": "Pastel de Chocolate",
     "price": 50,
     "category": "desserts",
+    "image": "https://source.unsplash.com/600x400/?chocolate-cake",
     "stock": 15,
     "rating": [
       { "userId": "u5", "value": 5 },
@@ -189,6 +198,7 @@ POSTRES
     "name": "Brownie",
     "price": 40,
     "category": "desserts",
+    "image": "https://source.unsplash.com/600x400/?brownie",
     "stock": 18,
     "rating": [
       { "userId": "u2", "value": 4 },
@@ -199,6 +209,7 @@ POSTRES
     "name": "Pay de Queso",
     "price": 55,
     "category": "desserts",
+    "image": "https://source.unsplash.com/600x400/?cheesecake",
     "stock": 12,
     "rating": [
       { "userId": "u1", "value": 5 },
@@ -209,6 +220,7 @@ POSTRES
     "name": "Galletas",
     "price": 20,
     "category": "desserts",
+    "image": "https://source.unsplash.com/600x400/?cookies",
     "stock": 40,
     "rating": [
       { "userId": "u5", "value": 4 },
@@ -223,6 +235,7 @@ COMBOS
     "name": "Combo Clásico",
     "price": 120,
     "category": "combos",
+    "image": "https://source.unsplash.com/600x400/?burger-combo",
     "stock": 15,
     "rating": [
       { "userId": "u1", "value": 5 },
@@ -234,6 +247,7 @@ COMBOS
     "name": "Combo Doble",
     "price": 150,
     "category": "combos",
+    "image": "https://source.unsplash.com/600x400/?double-burger-meal",
     "stock": 12,
     "rating": [
       { "userId": "u3", "value": 5 },
@@ -245,6 +259,7 @@ COMBOS
     "name": "Combo BBQ",
     "price": 160,
     "category": "combos",
+    "image": "https://source.unsplash.com/600x400/?bbq-burger",
     "stock": 10,
     "rating": [
       { "userId": "u5", "value": 4 },
@@ -256,6 +271,7 @@ COMBOS
     "name": "Combo Familiar",
     "price": 280,
     "category": "combos",
+    "image": "https://source.unsplash.com/600x400/?family-burger-meal",
     "stock": 8,
     "rating": [
       { "userId": "u1", "value": 5 },
@@ -267,6 +283,7 @@ COMBOS
     "name": "Combo Picante",
     "price": 140,
     "category": "combos",
+    "image": "https://source.unsplash.com/600x400/?spicy-burger",
     "stock": 14,
     "rating": [
       { "userId": "u2", "value": 4 },
@@ -278,6 +295,7 @@ COMBOS
     "name": "Combo Light",
     "price": 110,
     "category": "combos",
+    "image": "https://source.unsplash.com/600x400/?veggie-burger",
     "stock": 20,
     "rating": [
       { "userId": "u4", "value": 4 },

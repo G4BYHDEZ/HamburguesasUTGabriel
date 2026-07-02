@@ -5,7 +5,6 @@ module.exports.getAllProducts = (req, res) => {
 	const sort = req.query.sort == 'desc' ? -1 : 1;
 
 	Product.find()
-		.select(['-_id'])
 		.limit(limit)
 		.sort({ id: sort })
 		.then((products) => {
@@ -20,7 +19,6 @@ module.exports.getProduct = (req, res) => {
 	Product.findOne({
 		id,
 	})
-		.select(['-_id'])
 		.then((product) => {
 			res.json(product);
 		})
@@ -43,7 +41,6 @@ module.exports.getProductsInCategory = (req, res) => {
 	Product.find({
 		category,
 	})
-		.select(['-_id'])
 		.limit(limit)
 		.sort({ id: sort })
 		.then((products) => {

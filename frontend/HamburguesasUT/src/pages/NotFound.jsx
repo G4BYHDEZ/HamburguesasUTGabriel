@@ -1,31 +1,61 @@
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import FooterBar from "../components/FooterBar";
 
 function NotFound() {
   return (
+    <div className="hero-bg-wrapper">
 
-      <div className="hero-bg-wrapper">
-   
+      <Navbar />
 
-        <section className="hero-bg notfound-section">
-          <div className="hero-bg-container">
-            <img
-              src="/HamburguesasUT.png"
-              alt="HamburguesasUT Logo"
-              className="hero-bg-logo"
-            />
+      <main className="notfound-container">
 
-            <div className="notfound-content">
-              <h1>404</h1>
-              <h2>Página no encontrada</h2>
-              <p>
-                La página que intentas visitar no existe o fue movida.
-              </p>
+        <div className="notfound-card">
 
-            </div>
+          <img
+            src="src/HamburguesasUT.png"
+            alt="HamburguesasUT"
+            className="notfound-logo"
+          />
+
+          <span className="notfound-code">
+            ERROR 404
+          </span>
+
+          <h1 className="notfound-title">
+            Página no encontrada
+          </h1>
+
+          <p className="notfound-text">
+            Lo sentimos, la página que intentas visitar no existe,
+            fue movida o la dirección es incorrecta.
+          </p>
+
+          <div className="notfound-buttons">
+
+            <Link
+              to="/"
+              className="notfound-btn primary"
+            >
+              🏠 Ir al inicio
+            </Link>
+
+            <button
+              className="notfound-btn secondary"
+              onClick={() => window.history.back()}
+            >
+              ← Regresar
+            </button>
+
           </div>
-        </section>
-      </div>
 
+        </div>
+
+      </main>
+
+      <FooterBar />
+
+    </div>
   );
 }
 

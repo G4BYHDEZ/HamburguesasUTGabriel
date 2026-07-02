@@ -1,0 +1,103 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/public/fav.png" />
+
+  <title><%= page ? page : 'Docs'%> - DummyJSON - Free Fake REST API for Placeholder JSON Data</title>
+  <meta name="description" content="<%= description %>" />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+
+  <meta property="og:title" content="<%= page ? page : 'Docs'%> - DummyJSON - Free Fake REST API for Placeholder JSON Data" />
+  <meta property="og:description" content="<%= description %>" />
+  <meta property="og:image" content="https://dummyjson.com/public/img/meta.png" />
+  <meta property="og:url" content="<%= canonical %>" />
+  <meta property="og:site_name" content="DummyJSON" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <link rel="canonical" href="<%= canonical %>" />
+
+  <link rel="stylesheet" href="/public/css/docs.css" />
+  <link rel="stylesheet" href="/public/css/prism.css" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "name": "Authentication API Documentation | DummyJSON",
+      "url": "<%= canonical %>",
+      "description": "<%= description %>",
+      "mainEntityOfPage": {
+        "@type": "TechArticle",
+        "@id": "<%= canonical %>"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DummyJSON",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://dummyjson.com/public/img/meta.png",
+          "width": 600,
+          "height": 60,
+          "caption": "DummyJSON Logo"
+        },
+        "sameAs": [
+          "https://github.com/Ovi/DummyJSON",
+          "https://x.com/DummyJSON",
+          "https://linkedin.com/company/DummyJSON"
+        ]
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "DummyJSON - Free Fake REST API for Placeholder JSON Data",
+            "item": "https://dummyjson.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "<%= page ? page : 'Docs'%> - DummyJSON - Free Fake REST API for Placeholder JSON Data",
+            "item": "<%= canonical %>"
+          }
+          <% if (page) { %>,
+          {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "<%= page ? page : 'Docs'%> - DummyJSON - Free Fake REST API for Placeholder JSON Data",
+              "item": "<%= canonical %>"
+          }
+          <% } %>
+        ]
+      }
+    }
+  </script>
+
+  <% if (typeof(googleTagId) !== "undefined") { %>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= googleTagId %>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', '<%= googleTagId %>');
+  </script>
+  <% } %>
+
+  <!-- Google Ads -->
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1874186634672982"
+    crossorigin="anonymous"
+  ></script>
+</head>
